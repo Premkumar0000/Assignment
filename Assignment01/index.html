@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list left-nav">
+                <li><a href="#">Job Seeker</a></li>
+                <li><a href="#">Employer</a></li>
+                <li><a href="#">Cleaning Service</a></li>
+            </ul>
+            <div class="logo">
+                <a href="#">IMPACTO</a>
+            </div>
+            <ul class="nav-list right-nav">
+                <li><a href="#">Vocational Education & Training</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">EN <span class="dropdown-arrow">▼</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- grid -->
+     <div class="container">
+        <div class="col">
+             img1
+        </div>
+        <div class="col">
+              img2
+        </div>
+        <div class="col">
+              img3
+        </div>
+     </div>
+     <!--  -->
+     <!-- grid02 -->
+      <div class="container02">
+        <div class="line01"></div>
+        <div class="container03">
+            <div class="col3"></div>
+            <div class="col3"></div>
+            <div class="col3"></div>
+            <div class="col3"></div>
+            <div class="col3"></div>
+            <div class="col3"></div>
+            <div class="col3"></div>
+            <div class="col3"></div>
+        </div>
+        <div class="line01"></div>
+      </div>
+      <!--  -->
+      <!-- footer -->
+      <footer>
+        <div class="footer-content">
+            <div class="footer-section company-info">
+                <h3>Impacto B.V.</h3>
+                <p>Scharlooweg 19, Curaçao</p>
+                <p>T.: +599 9 461 7415</p>
+                <p>E.: info@impacto.cw</p>
+            </div>
+            <div class="footer-section sister-companies">
+                <h3>Our sister companies</h3>
+                <div class="company-logos">
+                    <img src="securitas-logo.png" alt="Securitas">
+                    <span>|</span>
+                    <img src="247-wegenwacht-logo.png" alt="24-7 Wegenwacht">
+                    <span>|</span>
+                    <img src="247-taxi-logo.png" alt="24-7 Taxi">
+                </div>
+            </div>
+            <div class="footer-section follow-us">
+               <center> <h3>Follow</h3>
+                <a href="#">LinkedIn</a><br>
+                <a href="#">Instagram</a></center>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 © 2023 IMPACTO | All right reserved.</p>
+            <p>Designed by Profound</p>
+        </div>
+    </footer>
+
+       <!--  -->
+   <script>
+    // script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.querySelectorAll('.nav-list');
+
+    menuToggle.addEventListener('click', function() {
+        navList.forEach(nav => nav.classList.toggle('active'));
+    });
+});
+
+   </script>
+</body>
+</html>
