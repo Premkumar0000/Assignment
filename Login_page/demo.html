@@ -4,8 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: blue;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: blue;
+    font-size: 1.5em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.links a:hover {
+    color: #ddd;
+}
+    </style>
+    <nav class="navbar">
+        <div class="logo">Logo</div>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="col"><h1>Welcome Back Mr/Ms<br> <?php echo htmlspecialchars($firstName . ' ' . $lastName); ?>!</h1>
+        </div>
+        <div class="col"></div>
+    </div>
 </body>
 </html>

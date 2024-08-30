@@ -1,27 +1,29 @@
+/* Reset margin and padding */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* Body styling */
 body {
     background-color: silver;
+    font-family: Arial, sans-serif;
 }
 
+/* Dashboard header styling */
 .dashboard_header {
     background-color: blue;
     padding: 50px;
     color: white;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-a {
-    margin-left: 57%;
-}
-
+/* Button styling in the dashboard header */
 #but {
-    margin-left: 57%;
     background-color: white;
-    width: 100px; /* Adjusted width for button */
+    width: 100px;
     height: 5vh;
     color: blue;
     border: none;
@@ -30,30 +32,46 @@ a {
     text-decoration: none;
 }
 
+/* Table styling */
 .table {
     background-color: white;
-    border: 1px solid white;
-    margin-top: 3%;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+    border: 1px solid #ddd;
+    margin: 2% 3.5%;
     padding: 1%;
+    border-radius: 5px;
 }
 
+/* Table header and cell styling */
 .inside table {
     width: 100%;
     border-collapse: collapse;
 }
 
 .inside th, .inside td {
-    padding: 10px;
+    padding: 12px;
     text-align: left;
-    border: 1px solid black;
+    border: 1px solid #ddd;
 }
 
 .inside th {
     background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
+.inside th a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.inside th a:hover {
+    text-decoration: underline;
+}
+
+/* Action button styling */
 .action-button {
     background-color: blue;
     color: white;
@@ -68,26 +86,25 @@ a {
 }
 
 .action-button.delete {
-    background-color: red; /* Red color for delete button */
+    background-color: red;
 }
 
 form {
-    display: inline; /* Ensure the form and buttons are inline */
+    display: inline;
 }
 
+/* Search bar styling */
 .search {
-    margin-top: 1%;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+    margin: 1% 3.5%;
 }
 
 #in {
     padding: 1%;
-    width: 30%;
+    width: 23%;
     margin-left: 1%;
 }
 
-#serc {
+#serc, #show_all, #add, #down {
     margin-left: 1%;
     width: 7%;
     height: 6.3vh;
@@ -96,15 +113,47 @@ form {
     border: none;
     cursor: pointer;
     font-size: 1em;
+}
 
-}
-#show_all{
-    margin-left: 1%;
-    width: 7%;
-    height: 6.5vh;
+#show_all {
     color: blue;
-    background-color:white;
-    border: none;
-    cursor: pointer;
+    background-color: white;
 }
-#add
+
+#down {
+    width: 4%;
+    height: 6.3vh;
+    position: absolute;
+    margin-left: 90%;
+    margin-top: -3.3% !important;
+}
+
+/* Pagination styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+    pointer-events: none;
+}
